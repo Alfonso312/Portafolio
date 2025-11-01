@@ -265,14 +265,14 @@ const CV = () => {
                 </div>
 
                 <div className="cv-actions">
-                  <button className="btn btn-primary">
+                  <a href="/CV.pdf" download="CV_Jose_Alfonso_Arevalo_Roldan.pdf" className="btn btn-primary">
                     <FaDownload className="btn-icon" />
                     Descargar PDF
-                  </button>
-                  <button className="btn btn-secondary">
+                  </a>
+                  <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
                     <FaEye className="btn-icon" />
                     Ver Completo
-                  </button>
+                  </a>
                 </div>
               </div>
             </motion.div>
