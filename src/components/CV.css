@@ -371,6 +371,59 @@
   border: 1px solid rgba(78, 205, 196, 0.2);
 }
 
+.idiomas-container {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.idiomas-container:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent-color);
+}
+
+.idiomas-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.idioma-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(0, 255, 136, 0.05);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.idioma-item:hover {
+  background: rgba(0, 255, 136, 0.1);
+  transform: translateX(5px);
+}
+
+.idioma-label {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.disponibilidad {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(78, 205, 196, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.disponibilidad-label {
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .cv-layout {

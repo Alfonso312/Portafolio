@@ -12,7 +12,8 @@ import {
   FaPhone,
   FaEnvelope,
   FaLinkedin,
-  FaGithub
+  FaGithub,
+  FaGlobe
 } from 'react-icons/fa'
 import './CV.css'
 
@@ -44,88 +45,73 @@ const CV = () => {
   }
 
   const personalInfo = {
-    name: 'Tu Nombre Completo',
-    title: 'Desarrollador Full Stack',
-    email: 'tu.email@ejemplo.com',
-    phone: '+1 (555) 123-4567',
-    location: 'Ciudad, País',
-    linkedin: 'https://linkedin.com/in/tu-perfil',
-    github: 'https://github.com/tu-usuario'
+    name: 'Jose Alfonso Arevalo Roldan',
+    title: 'Desarrollador de Software',
+    email: 'arevaloroldan31@gmail.com',
+    phone: '928199942',
+    location: 'Lima, Perú',
+    linkedin: 'https://www.linkedin.com/school/institútocertús/posts/?feedView=all',
+    github: 'https://github.com/Alfonso312'
   }
 
   const experience = [
     {
       id: 1,
-      position: 'Desarrollador Full Stack Senior',
-      company: 'Tech Solutions Inc.',
-      period: '2022 - Presente',
-      description: 'Lidero el desarrollo de aplicaciones web escalables usando React, Node.js y AWS. Gestiono un equipo de 5 desarrolladores y implemento mejores prácticas de desarrollo.',
+      position: 'Dependiente',
+      company: "D'compras Fashion Wear S.A.",
+      period: 'Dic 2011 - Ene 2012',
+      description: 'Atención al cliente y manejo de caja en establecimiento comercial de moda.',
       achievements: [
-        'Aumenté la eficiencia del equipo en un 40% implementando metodologías ágiles',
-        'Reduje los tiempos de carga de la aplicación en un 60%',
-        'Implementé CI/CD que redujo los deploys de 2 horas a 15 minutos'
+        'Atención personalizada a clientes',
+        'Manejo eficiente de caja y transacciones',
+        'Control de inventario y mercadería'
       ],
-      technologies: ['React', 'Node.js', 'AWS', 'Docker', 'PostgreSQL']
+      technologies: ['Atención al Cliente', 'Ventas', 'Caja']
     },
     {
       id: 2,
-      position: 'Desarrollador Frontend',
-      company: 'Digital Agency',
-      period: '2020 - 2022',
-      description: 'Desarrollé interfaces de usuario responsivas y optimizadas para múltiples dispositivos. Colaboré estrechamente con diseñadores UX/UI.',
+      position: 'Empleado',
+      company: "Supermercados Peruanos Sociedad Anónima (S.P.S.A. 'O')",
+      period: 'Ago 2014 - Sep 2014',
+      description: 'Operaciones de retail en supermercado nacional.',
       achievements: [
-        'Creé 15+ componentes reutilizables que aceleraron el desarrollo',
-        'Mejoré la accesibilidad web cumpliendo estándares WCAG 2.1',
-        'Implementé testing automatizado con Jest y React Testing Library'
+        'Atención al cliente en área comercial',
+        'Reposición de productos',
+        'Mantenimiento de orden y limpieza'
       ],
-      technologies: ['React', 'TypeScript', 'SASS', 'Jest', 'Figma']
-    },
-    {
-      id: 3,
-      position: 'Desarrollador Junior',
-      company: 'StartupXYZ',
-      period: '2019 - 2020',
-      description: 'Participé en el desarrollo de la plataforma principal de la startup, trabajando con tecnologías modernas y metodologías ágiles.',
-      achievements: [
-        'Contribuí al desarrollo de la API REST principal',
-        'Implementé autenticación y autorización segura',
-        'Optimicé consultas de base de datos mejorando el rendimiento'
-      ],
-      technologies: ['JavaScript', 'Express.js', 'MongoDB', 'JWT', 'Git']
+      technologies: ['Retail', 'Logística', 'Servicio al Cliente']
     }
   ]
 
   const education = [
     {
       id: 1,
-      degree: 'Ingeniería en Sistemas Computacionales',
-      institution: 'Universidad Tecnológica',
-      period: '2015 - 2019',
-      description: 'Enfoque en desarrollo de software y arquitectura de sistemas. Proyecto final: Sistema de gestión empresarial con React y Node.js.',
-      gpa: '3.8/4.0'
-    },
-    {
-      id: 2,
-      degree: 'Certificación en Cloud Computing',
-      institution: 'AWS Academy',
-      period: '2021',
-      description: 'Especialización en servicios de AWS, arquitectura de soluciones en la nube y mejores prácticas de seguridad.',
-      gpa: 'A+'
+      degree: 'Técnico en Diseño y Desarrollo de Software',
+      institution: 'Instituto CERTUS',
+      period: 'En progreso',
+      description: 'Formación técnica especializada en programación backend y desarrollo de aplicaciones web. Enfoque en control de acceso, manejo de bases de datos relacionales y desarrollo de APIs REST.',
+      gpa: 'Cursando'
     }
   ]
 
   const skills = {
-    programming: ['JavaScript', 'TypeScript', 'Python', 'Java', 'C++'],
-    frameworks: ['React', 'Node.js', 'Express', 'Next.js', 'Django'],
-    databases: ['PostgreSQL', 'MongoDB', 'Redis', 'MySQL'],
-    tools: ['Git', 'Docker', 'AWS', 'Figma', 'Jest', 'Webpack'],
-    languages: ['Español (Nativo)', 'Inglés (Avanzado)', 'Francés (Intermedio)']
+    lenguajes: ['Java (Spring Boot)', 'JavaScript (Node.js)', 'Python'],
+    frameworks: ['Spring Boot', 'Vue.js', 'React', '.NET Core'],
+    basesDeDatos: ['MySQL', 'PowerBI', 'MongoDB'],
+    herramientas: ['Postman', 'Visual Studio Code'],
+    adicional: ['Licencia de Conducir A1 - Vigente']
+  }
+
+  const languages = {
+    español: 'Español: Nativo',
+    ingles: 'Inglés: Básico'
   }
 
   const tabs = [
     { key: 'experience', label: 'Experiencia', icon: <FaBriefcase /> },
     { key: 'education', label: 'Educación', icon: <FaGraduationCap /> },
-    { key: 'skills', label: 'Habilidades', icon: <FaUser /> }
+    { key: 'skills', label: 'Habilidades', icon: <FaUser /> },
+    { key: 'idiomas', label: 'Idiomas', icon: <FaGlobe /> }
   ]
 
   const renderExperience = () => (
@@ -197,7 +183,11 @@ const CV = () => {
             whileHover={{ scale: 1.02 }}
           >
             <h4 className="skill-category-title">
-              {category.charAt(0).toUpperCase() + category.slice(1)}
+              {category === 'lenguajes' ? 'Lenguajes' :
+               category === 'frameworks' ? 'Frameworks' :
+               category === 'basesDeDatos' ? 'Bases de Datos' :
+               category === 'herramientas' ? 'Herramientas' :
+               category === 'adicional' ? 'Adicional' : category}
             </h4>
             <div className="skill-list">
               {skillList.map((skill, idx) => (
@@ -207,6 +197,27 @@ const CV = () => {
           </motion.div>
         ))}
       </div>
+    </div>
+  )
+
+  const renderIdiomas = () => (
+    <div className="cv-section">
+      <motion.div 
+        className="idiomas-container"
+        variants={itemVariants}
+      >
+        <div className="idiomas-list">
+          <div className="idioma-item">
+            <span className="idioma-label">{languages.español}</span>
+          </div>
+          <div className="idioma-item">
+            <span className="idioma-label">{languages.ingles}</span>
+          </div>
+          <div className="disponibilidad">
+            <span className="disponibilidad-label">✅ Disponibilidad Inmediata</span>
+          </div>
+        </div>
+      </motion.div>
     </div>
   )
 
@@ -295,6 +306,7 @@ const CV = () => {
                 {activeTab === 'experience' && renderExperience()}
                 {activeTab === 'education' && renderEducation()}
                 {activeTab === 'skills' && renderSkills()}
+                {activeTab === 'idiomas' && renderIdiomas()}
               </div>
             </motion.div>
           </div>
